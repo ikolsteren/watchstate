@@ -57,6 +57,16 @@ After adding your servers, You should import your current watch state by running
 ```bash
 $ docker exec -ti watchstate console state:import -vvrm
 ```
+#### TIP:
+
+For Jellyfin create a unique API Key to authenicate watchstate to the Jellyfin Server
+For Plex you will need to find the X-Plex-Token
+https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/
+
+The Server URL would be the following format
+http://X.X.X.X:8096 for Jellyfin
+http://X.X.X.X:32400 for Plex
+
 
 ---
 
@@ -234,7 +244,7 @@ Go to your Manage Emby Server > Server > Webhooks > (Click Add Webhook)
 
 ##### Webhook Url:
 
-`http://localhost:8081/?&apikey=[YOUR_API_KEY]`
+`http://localhost:8081/?apikey=[YOUR_API_KEY]`
 
 ##### Webhook Events
 
@@ -251,7 +261,7 @@ Go to your plex WebUI > Settings > Your Account > Webhooks > (Click ADD WEBHOOK)
 
 ##### URL:
 
-`http://localhost:8081/?&apikey=[YOUR_API_KEY]`
+`http://localhost:8081/?apikey=[YOUR_API_KEY]`
 
 Click `Save Changes`
 
